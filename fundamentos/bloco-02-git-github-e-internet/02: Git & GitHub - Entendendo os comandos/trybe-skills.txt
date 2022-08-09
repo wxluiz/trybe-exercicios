@@ -2,3 +2,6 @@ Unix
 Bash
 Git
 Python
+HTML
+CSS
+
