@@ -1,0 +1,27 @@
+div:hover {
+    border: 5px solid red;   
+}
+   
+div:nth-child(3) {
+    background-color: red;
+}
+
+div:nth-child(4) {
+    background-color: blue;
+}
+
+div:nth-child(5) {
+    background-color: purple;
+    padding: 20px;
+}
+
+div:nth-child(6) {
+    background-color: brown;
+}
+
+div:nth-child(7) {
+    background-color: fuchsia;
+}
+h3:nth-child(odd) {
+    font-style: italic;
+}
