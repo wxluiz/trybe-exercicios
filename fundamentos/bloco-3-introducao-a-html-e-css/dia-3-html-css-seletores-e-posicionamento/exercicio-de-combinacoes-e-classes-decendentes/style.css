@@ -1,0 +1,56 @@
+ol li {
+    background-color: yellow ;
+}
+
+ol li:nth-child(odd) {
+    color: green;
+}
+
+ol li:nth-child(even) {
+    text-transform:uppercase;
+}
+
+h1, h3 {
+    color: red;
+}
+
+h1 {
+    width: 40px;
+    border: 1px solid black;
+}
+
+li {
+    font-size: 20px;
+}
+
+ul#linguagem li:nth-child(-n+3) {
+    color: blue;
+}
+
+ul#linguagem li:nth-of-type {
+    background-color: pink;
+}
+
+
+.sites:hover {
+font-weight: bold;
+}
+.um {
+    color: orange;
+}
+
+.dois {
+    color: green;
+}
+
+.tres {
+    color: black;
+}
+
+.quatro {
+    color: yellow;
+}
+
+.cinco {
+    color: green;
+}
