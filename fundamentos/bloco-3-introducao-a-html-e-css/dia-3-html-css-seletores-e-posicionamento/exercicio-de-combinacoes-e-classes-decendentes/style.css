@@ -31,10 +31,14 @@ ul#linguagem li:nth-of-type {
     background-color: pink;
 }
 
+.sites {
+    text-decoration: none;
+}
 
 .sites:hover {
 font-weight: bold;
 }
+
 .um {
     color: orange;
 }
@@ -53,4 +57,7 @@ font-weight: bold;
 
 .cinco {
     color: green;
+}
+.rosa:hover {
+    background-color: pink;
 }
