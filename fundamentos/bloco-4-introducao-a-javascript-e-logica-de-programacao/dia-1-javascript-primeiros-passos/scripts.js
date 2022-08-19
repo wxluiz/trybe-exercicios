@@ -104,4 +104,30 @@ switch (minuscula) {
 }
 
 
+// 7.Escreva um programa que converte uma nota dada em porcentagem (de 0 a 100) em conceitos de A a F. Siga essas regras:
 
+
+let notaEmPorcentagem = 60;
+
+
+if (notaEmPorcentagem < 0 && notaEmPorcentagem > 100) {
+    console.log("ERROR 404")
+}
+else if (notaEmPorcentagem >= 90){
+    console.log("A")
+}
+else if (notaEmPorcentagem >= 80){
+    console.log("B")
+}
+else if (notaEmPorcentagem >= 70){
+    console.log("C")
+}
+else if (notaEmPorcentagem >= 60){
+    console.log("D")
+}
+else if (notaEmPorcentagem >= 50){
+    console.log("E")
+}
+else if (notaEmPorcentagem < 50){
+    console.log("F")
+}
