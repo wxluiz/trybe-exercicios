@@ -131,3 +131,108 @@ else if (notaEmPorcentagem >= 50){
 else if (notaEmPorcentagem < 50){
     console.log("F")
 }
+
+
+// 8.🚀 Escreva um programa que defina três números em constantes e retorne true se pelo menos uma das três for par. Caso contrário, ele retorna false.
+
+
+const tres = [1, 5, 7]
+
+if (tres[0] % 2 == 0 || tres[1] % 2 == 0 || tres[2] % 2 == 0) {
+    console.log("true")
+}
+else {
+    console.log("false")
+}
+
+
+// 9.Escreva um programa que defina três números em constantes e retorne true se pelo menos uma das três for ímpar. Caso contrário, ele retorna false.
+
+const tres = [2, 2, 4]
+
+if (tres[0] % 2 != 0 || tres[1] % 2 != 0 || tres[2] % 2 != 0) {
+    console.log("true")
+}
+else {
+    console.log("false")
+}
+
+
+// 10.Escreva um programa que se inicie com dois valores em duas constantes diferentes: o custo de um produto e seu valor de venda. A partir dos valores, calcule quanto de lucro (valor de venda descontado o custo do produto) a empresa terá ao vender mil desses produtos.
+
+const custoProduto = 50;
+const valorVenda = 100;
+let impostoSobreCusto = custoProduto * 0.2;
+let valorCustoTotal = custoProduto + impostoSobreCusto;
+let lucro = valorVenda - valorCustoTotal
+
+if (custoProduto < 0 || valorVenda < 0) {
+    console.log("Valor não correspondente.");
+}
+else {
+    console.log(lucro * 1000)
+}
+
+
+// 11.Uma pessoa que trabalha de carteira assinada no Brasil tem descontados de seu salário bruto o INSS e o IR. Faça um programa que, dado um salário bruto, calcule o líquido a ser recebido.
+
+let salarioBruto = 3000;
+let inss = 0;
+let aliquota = 0;
+let parcela = 0;
+let ir = 0;
+let salarioBase = 0;
+let salarioLiquido = 0;
+
+
+if (salarioBruto <= 1556.94) {
+    inss = inss + salarioBruto * 0.08;
+    salarioBase = salarioBruto - inss;
+    }
+    else if (salarioBruto >= 1556.95 && salarioBruto <= 2594.92) {
+    inss = inss + salarioBruto * 0.09;
+    salarioBase = salarioBruto - inss;
+    }
+    else if (salarioBruto >= 2594.93 && salarioBruto <= 5189.82) {
+    inss = inss + salarioBruto * 0.11;
+    salarioBase = salarioBruto - inss;
+    }
+    else {
+    inss = inss + 570.88;
+    salarioBase = salarioBruto - inss;
+}
+
+if (salarioBase <= 1903.98) {
+    console.log("isento")
+    salarioLiquido = salarioBase;
+    }
+    else if (salarioBase >= 1903.99 && salarioBase <= 2826.65) {
+    aliquota = salarioBase * 0.075;
+    parcela = 142.80;
+    ir = aliquota - parcela;
+    salarioLiquido = salarioBase - ir;
+    }
+    else if (salarioBase >= 2826.66 && salarioBase <= 3751.05) {
+    aliquota = salarioBase * 0.15;
+    parcela = 354.80;
+    ir = aliquota - parcela;
+    salarioLiquido = salarioBase - ir;
+    }
+    else if (salarioBase >= 3751.06 && salarioBase <= 4664.68) {
+    aliquota = salarioBase * 0.225;
+    parcela = 636.13;
+    ir = aliquota - parcela;
+    salarioLiquido = salarioBase - ir;
+    }
+    else {
+    aliquota = salarioBase * 0.275;
+    parcela = 869.36;
+    ir = aliquota - parcela;
+    salarioLiquido = salarioBase - ir;
+}
+console.log(salarioLiquido)
+
+
+
+
+
