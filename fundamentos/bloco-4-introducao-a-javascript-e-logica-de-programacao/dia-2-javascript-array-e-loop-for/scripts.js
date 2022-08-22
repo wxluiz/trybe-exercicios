@@ -33,11 +33,25 @@ let numbers = [5, 9, 3, 19, 70, 8, 100, 2, 35, 27];
 // console.log(media > 20? "Valor maior que 20":"valor menor ou igual a 20")
 
 // Exercicio 5.
-let maiorNumero = numbers[0]
-for (index = 0; index < numbers.length; index +=1) {
-    if (numbers[index] > maiorNumero) {
-        maiorNumero = numbers[index]
-    }
+// let maiorNumero = numbers[0]
+// for (index = 0; index < numbers.length; index +=1) {
+//     if (numbers[index] > maiorNumero) {
+//         maiorNumero = numbers[index]
+//     }
+// }
+// console.log(maiorNumero)
+
+// Exercicio 6.
+let impar = 0;
+for (let index = 0; index < numbers.length; index+=1) {
+    if (numbers[index] % 2 != 0) {
+        impar += 1
+    }  
+
 }
-console.log(maiorNumero)
+console.log(impar)
+
+if (impar = 0) {
+    console.log("enhum valor ímpar encontrado")
+}
 
