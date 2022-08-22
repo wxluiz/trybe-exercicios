@@ -58,10 +58,21 @@ let numbers = [5, 9, 3, 19, 70, 8, 100, 2, 35, 27];
 // Exercicio 7.
 
 let menorNumero = numbers[0]
-for (index = 0; index < numbers.length; index +=1) {
+for (let index = 0; index < numbers.length; index +=1) {
     if (numbers[index] < menorNumero) {
         menorNumero = numbers[index]
     }
 }
 console.log(menorNumero)
+
+
+// Exercicio 8.
+
+let ate25 = 0
+let array = []
+for (let index = 1; index <= 25; index +=1) {
+    ate25 += 1
+    array.push(ate25)
+}
+console.log(array)
 
