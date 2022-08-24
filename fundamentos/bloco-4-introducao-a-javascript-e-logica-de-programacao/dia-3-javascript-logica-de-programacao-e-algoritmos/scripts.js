@@ -33,3 +33,20 @@ for (let index = 0; index < array.length; index +=1) {
 console.log(maior)
 console.log(menor)
 
+// Exercicio 4.
+
+
+let maiorPrimo = 0;
+for (let numeroAtual = 2; numeroAtual <= 50; numeroAtual +=1) {
+    let primo = true
+    for (let divisorAtual = 2; divisorAtual < numeroAtual; divisorAtual +=1) {
+        if (numeroAtual % divisorAtual === 0) {
+            primo = false
+        }
+    }
+    if (primo) {
+        maiorPrimo = numeroAtual;
+    }
+}
+console.log(maiorPrimo)
+
