@@ -181,11 +181,30 @@
 
 // 6 - Crie uma função que receba um número natural (número inteiro não negativo) N e retorne o somatório de todos os números de 1 até N.
 
-function somaAteN (N) {
-    let contagem = 0;
-    for (let index = 1; index <= N; index += 1) {
-        contagem += index;
+// function somaAteN (N) {
+//     let contagem = 0;
+//     for (let index = 1; index <= N; index += 1) {
+//         contagem += index;
+//     }
+//     return contagem;
+// }
+// console.log(somaAteN(5))
+
+// 7 - Crie uma função que receba uma string word e outra string ending. Verifique se a string ending é o final da string word. Considere que a string ending sempre será menor que a string word.
+
+
+function verificarPalavra(word, ending) {
+    word = word.split('');
+  ending = ending.split('');
+  for (let index = 0; index < ending.length; index += 1) {
+    if (word[word.length - ending.length + index] != ending[index]) {
+        return false
     }
-    return contagem;
+  }
+  return true
 }
-console.log(somaAteN(5))
+console.log(verificarPalavra('trybe', 'be'))
+console.log(verificarPalavra('joaofernando', 'fernan'))
+
+
+
