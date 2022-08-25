@@ -143,15 +143,38 @@
 // 4 - Crie uma função que receba um array de nomes e retorne o nome com a maior quantidade de caracteres.
 
 
-function maiorNome (array) {
-    let nome1 = array[0];
+// function maiorNome (array) {
+//     let nome1 = array[0];
+//     for (let index in array) {
+//         if (nome1.length < array[index].length) {
+//             nome1 = array[index];
+//         }
+//     }
+//     return nome1
+// }
+
+// console.log(maiorNome(['José', 'Lucas', 'Nádia', 'Fernanda', 'Cairo', 'Joana']))
+
+
+// 5 - Crie uma função que receba um array de inteiros e retorne o inteiro que mais se repete.
+
+function maisRepete (array) {
+    let repeticoes = 0;
+    let repetidoAtual = 0;
+    let indexRepetido = 0;
     for (let index in array) {
-        if (nome1.length < array[index].length) {
-            nome1 = array[index];
+        let verifica = array[index];
+        for (let index2 in array) {
+            if (verifica === array[index2]) {
+                repeticoes += 1;
+            }
         }
+        if (repeticoes > repetidoAtual) {
+            repetidoAtual = repeticoes;
+            indexRepetido = index;
+        }
+        repeticoes = 0
     }
-    return nome1
+    return array[indexRepetido]
 }
-
-console.log(maiorNome(['José', 'Lucas', 'Nádia', 'Fernanda', 'Cairo', 'Joana']))
-
+console.log(maisRepete([2, 3, 2, 5, 8, 2, 3]))
