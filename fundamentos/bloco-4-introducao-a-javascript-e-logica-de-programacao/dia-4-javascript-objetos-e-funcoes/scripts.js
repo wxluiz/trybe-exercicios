@@ -109,18 +109,34 @@
 
 // 2 - Crie uma função que receba um array de inteiros e retorne o índice do maior valor.
 
-function maiorValor (array) {
+// function maiorValor (array) {
+//     let numero1 = array[0];
+//     let posicao = 0;
+//     for (let index in array) {
+//         if (numero1 < array[index]) {
+//             numero1 = array[index];
+//             posicao = index;
+//         }
+//     }
+//     return posicao
+// }
+// console.log(maiorValor([2, 3, 6, 7, 10, 1]))
+
+
+// 3 - Crie uma função que receba um array de inteiros e retorne o índice do menor valor.
+
+
+function menorValor (array) {
     let numero1 = array[0];
     let posicao = 0;
     for (let index in array) {
-        if (numero1 < array[index]) {
+        if (numero1 > array[index]) {
             numero1 = array[index];
             posicao = index;
         }
     }
     return posicao
 }
-console.log(maiorValor([2, 3, 6, 7, 10, 1]))
-
+console.log(menorValor([2, 4, 6, 7, 10, 0, -3]))
 
 
