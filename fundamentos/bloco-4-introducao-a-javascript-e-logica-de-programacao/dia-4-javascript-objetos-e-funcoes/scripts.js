@@ -158,23 +158,34 @@
 
 // 5 - Crie uma função que receba um array de inteiros e retorne o inteiro que mais se repete.
 
-function maisRepete (array) {
-    let repeticoes = 0;
-    let repetidoAtual = 0;
-    let indexRepetido = 0;
-    for (let index in array) {
-        let verifica = array[index];
-        for (let index2 in array) {
-            if (verifica === array[index2]) {
-                repeticoes += 1;
-            }
-        }
-        if (repeticoes > repetidoAtual) {
-            repetidoAtual = repeticoes;
-            indexRepetido = index;
-        }
-        repeticoes = 0
+// function maisRepete (array) {
+//     let repeticoes = 0;
+//     let repetidoAtual = 0;
+//     let indexRepetido = 0;
+//     for (let index in array) {
+//         let verifica = array[index];
+//         for (let index2 in array) {
+//             if (verifica === array[index2]) {
+//                 repeticoes += 1;
+//             }
+//         }
+//         if (repeticoes > repetidoAtual) {
+//             repetidoAtual = repeticoes;
+//             indexRepetido = index;
+//         }
+//         repeticoes = 0
+//     }
+//     return array[indexRepetido]
+// }
+// console.log(maisRepete([2, 3, 2, 5, 8, 2, 3]))
+
+// 6 - Crie uma função que receba um número natural (número inteiro não negativo) N e retorne o somatório de todos os números de 1 até N.
+
+function somaAteN (N) {
+    let contagem = 0;
+    for (let index = 1; index <= N; index += 1) {
+        contagem += index;
     }
-    return array[indexRepetido]
+    return contagem;
 }
-console.log(maisRepete([2, 3, 2, 5, 8, 2, 3]))
+console.log(somaAteN(5))
