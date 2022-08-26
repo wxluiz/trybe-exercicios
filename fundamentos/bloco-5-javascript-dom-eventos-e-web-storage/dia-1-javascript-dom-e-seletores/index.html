@@ -56,18 +56,16 @@
         6. Crie e execute uma função que exiba o conteúdo de todas as tags <p> no console.
         */
        document.getElementsByTagName("p")[1].innerText = "Daqui 2 anos me vejo trabalhando em uma empresa e evoluindo e aprendendo cada vez mais";
+       document.getElementsByTagName("main")[0].style.backgroundColor = "rgb(76,164,109)";
+       document.getElementsByTagName("section")[0].style.backgroundColor = "white";
        document.getElementsByTagName("h1")[0].innerText = "Exercício 5.1 - JavaScript"
        document.getElementsByTagName("p")[0].style.textTransform = "uppercase";
        document.getElementsByTagName("p")[1].style.textTransform = "uppercase";
        document.getElementsByTagName("p")[2].style.textTransform = "uppercase";
-       document.getElementsByTagName("main")[0].style.backgroundColor = "rgb(76,164,109)";
-
-       let vermelho = document.getElementsByTagName("section");
-       vermelho[0].style.backgroundColor = "white";
-       vermelho[1].style.backgroundColor = "white";
-       vermelho[2].style.backgroundColor = "white";
-       
-       
+       let paragrafo1 = document.getElementsByTagName("p")[0].innerText
+       let paragrafo2 = document.getElementsByTagName("p")[1].innerText
+       let paragrafo3 = document.getElementsByTagName("p")[2].innerText
+       console.log(paragrafo1 + ", " + paragrafo2 + ", " + paragrafo3);
     </script>
   </body>
 </html>
