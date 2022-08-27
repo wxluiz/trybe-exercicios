@@ -57,14 +57,14 @@
   </head>
   <body>
     <script>
-        // 1. 🚀 Adicione a tag h1 com o texto Exercício 5.2 - JavaScript DOM como filho da tag body;
-        
+        // 1.🚀 Adicione a tag h1 com o texto Exercício 5.2 - JavaScript DOM como filho da tag body;
+
         let paiBody = document.querySelector("body");
         let titulo = document.createElement("h1");
         titulo.innerText = "Exercício 5.2 - JavaScript DOM";
         paiBody.appendChild(titulo);
 
-        // 2. 🚀 Adicione a tag main com a classe main-content como filho da tag body;
+        // 2.🚀 Adicione a tag main com a classe main-content como filho da tag body;
 
         function createTagElements(parent, tag) {
         let newTag = document.createElement(tag)
@@ -73,6 +73,13 @@
 
         createTagElements(paiBody, "main");
         document.querySelector("main").className = "main-content";
+
+        // 3.🚀 Adicione a tag section com a classe center-content como filho da tag main criada no passo 2;
+
+        let main = document.querySelector("main");
+        createTagElements(main, "section");
+        document.querySelector("section").className = "center-content";
+        
 
 
     </script>
