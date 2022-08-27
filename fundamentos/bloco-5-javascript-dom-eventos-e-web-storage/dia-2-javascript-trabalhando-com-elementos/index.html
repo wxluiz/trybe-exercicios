@@ -102,8 +102,34 @@
         createTagElements(section.nextElementSibling, "img");
         document.querySelector("img").src = "https://picsum.photos/200";
         document.querySelector("img").className = "small-image";
-        
+
         // 8.🚀 Adicione uma lista não ordenada com os valores de 1 a 10 por extenso, ou seja, um, dois, três, ... como valores da lista. Essa lista deve ser filha do section criado no passo 6;
+
+        createTagElements(section.nextElementSibling.nextElementSibling, "ul");
+        let lista = document.querySelector("ul");
+
+        let listaDeNumeros = [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+        ]
+
+        for (let index = 0; index < listaDeNumeros.length; index += 1) {
+            let numero = listaDeNumeros[index];
+
+            let numeros = document.createElement("li");
+            numeros.innerText = numero;
+
+            lista.appendChild(numeros);
+        }
+
         // 9.🚀 Adicione 3 tags h3, todas sendo filhas do main criado no passo 2.
 
 
