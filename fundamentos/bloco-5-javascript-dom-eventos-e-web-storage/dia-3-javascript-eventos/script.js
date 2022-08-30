@@ -46,4 +46,17 @@ function createDaysOfTheWeek() {
     }
   }
 
-  createDaysOfTheMonth()
+  createDaysOfTheMonth();
+
+  function CreateHolidayButton(buttonName) {
+    let buttonPai = document.querySelector(".buttons-container");
+    let newButton = document.createElement("button");
+    let idNewButton = "btn-holiday";
+
+    newButton.innerHTML = buttonName;
+    newButton.id = idNewButton;
+
+    buttonPai.appendChild(newButton);
+  }
+
+  CreateHolidayButton("Feriados");
