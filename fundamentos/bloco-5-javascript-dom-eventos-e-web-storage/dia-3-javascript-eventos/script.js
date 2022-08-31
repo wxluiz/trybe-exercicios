@@ -60,3 +60,24 @@ function createDaysOfTheWeek() {
   }
 
   CreateHolidayButton("Feriados");
+
+  function holidayColor() {
+    let feriadosDias = document.querySelectorAll(".holiday");
+    let butao = document.querySelector("#btn-holiday");
+    let corInicial = "rgb(238,238,238)"
+    let novaCor = "red"
+
+    butao.addEventListener("click", function() {
+      for (let index = 0; index < feriadosDias.length; index += 1) {
+
+        if (feriadosDias[index].style.backgroundColor === novaCor) {
+          feriadosDias[index].style.backgroundColor = corInicial;
+        }
+        else {
+          feriadosDias[index]. style.backgroundColor = novaCor;
+        }
+      }
+    })
+  }
+
+  holidayColor()
