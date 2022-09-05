@@ -80,4 +80,44 @@ function createDaysOfTheWeek() {
     })
   }
 
-  holidayColor()
+  holidayColor();
+
+  function createFridayButton(buttonName) {
+
+    let buttonContainer = document.querySelector('.buttons-container');
+    let newButton = document.createElement('button');
+    let newButtonID = 'btn-friday';
+
+    newButton.innerHTML = buttonName;
+    newButton.id = newButtonID
+
+    buttonContainer.appendChild(newButton);
+  }
+
+  createFridayButton('Sexta-feira');
+
+  function changeTextFriday(fridaysArray) {
+    let fridayButton = document.querySelector('#btn-friday');
+    let fridays = document.getElementsByClassName('friday');
+    let newFridayText = 'SEXTOOU'
+
+    fridayButton.addEventListener("click", function() {
+      for (let index = 0; index < fridays.length; index += 1) {
+        if (fridays[index].innerHTML !== newFridayText) {
+          fridays[index].innerHTML = newFridayText;
+        } else {
+          fridays[index].innerHTML = fridaysArray[index];
+        }
+      }
+    });
+  }
+
+  let decemberFridays = [ 4, 11, 18, 25 ];
+  changeTextFriday(decemberFridays);
+
+  
+ 
+
+
+
+  
