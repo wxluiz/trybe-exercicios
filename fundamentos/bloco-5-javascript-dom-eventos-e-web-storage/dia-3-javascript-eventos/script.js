@@ -115,7 +115,30 @@ function createDaysOfTheWeek() {
   let decemberFridays = [ 4, 11, 18, 25 ];
   changeTextFriday(decemberFridays);
 
+  function dayMouseOver() {
+    let days = document.getElementsByClassName('day');
+    for (let index = 0; index < days.length; index += 1) {
+      days[index].addEventListener('mouseover', function(event) {
+        event.target.style.fontSize = '50px';
+        event.target.style.fontWeight = '600';
+      })
+    } 
+  }
   
+  function dayMouseOut() {
+    let days = document.getElementsByClassName('day');
+    for (let index = 0; index < days.length; index += 1) {
+      days[index].addEventListener('mouseout', function(event) {
+        event.target.style.fontSize = '20px';
+        event.target.style.fontWeight = '200';
+      })
+    }
+    
+  }
+
+  dayMouseOver();
+  dayMouseOut();
+
  
 
 
