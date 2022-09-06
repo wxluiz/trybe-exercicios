@@ -119,7 +119,7 @@ function createDaysOfTheWeek() {
     let days = document.getElementsByClassName('day');
     for (let index = 0; index < days.length; index += 1) {
       days[index].addEventListener('mouseover', function(event) {
-        event.target.style.fontSize = '50px';
+        event.target.style.fontSize = '30px';
         event.target.style.fontWeight = '600';
       })
     } 
@@ -133,11 +133,21 @@ function createDaysOfTheWeek() {
         event.target.style.fontWeight = '200';
       })
     }
-    
   }
 
   dayMouseOver();
   dayMouseOut();
+
+  function criaTarefas(nomeDaTarefa) {
+    let tarefaPai = document.querySelector('.my-tasks');
+    let tarefa = document.createElement('span');
+
+    tarefa.innerHTML = nomeDaTarefa
+    tarefaPai.appendChild(tarefa);
+  }
+
+  criaTarefas('cozinhar');
+  
 
  
 
