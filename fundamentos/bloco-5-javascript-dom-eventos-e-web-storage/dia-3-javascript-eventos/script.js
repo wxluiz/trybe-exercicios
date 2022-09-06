@@ -147,7 +147,20 @@ function createDaysOfTheWeek() {
   }
 
   criaTarefas('cozinhar');
+
+  function addColor(cor) {
+    let pai = document.querySelector('.my-tasks');
+    let legendaCor = document.createElement('div');
+    legendaCor.className = 'task'
+    legendaCor.style.backgroundColor = cor;
+
+    pai.appendChild(legendaCor);
+  }
+
+  addColor('blue')
+
   
+
 
  
 
