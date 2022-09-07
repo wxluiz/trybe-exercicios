@@ -159,7 +159,42 @@ function createDaysOfTheWeek() {
 
   addColor('blue')
 
-  
+  function taskClass() {
+    let selectedTask = document.getElementsByClassName('task selected');
+    let myTasks = document.querySelector('.task');
+    myTasks.addEventListener('click', function(event) {
+      if (selectedTask.length === 0) {
+        event.target.className = 'task selected';
+      }
+      else {
+        event.target.className = 'task'
+      }
+    })
+  }
+
+  taskClass();
+
+  function setDayColor() {
+    let selectedTask = document.getElementsByClassName('task selected');
+    let task = document.querySelector('.task');
+    let days = document.querySelector('#days');
+    let taskColor = task.style.backgroundColor;
+
+    days.addEventListener('click', function(event){
+      let eventTargetColor = event.target.style.color;
+
+      if (selectedTask.length > 0 && eventTargetColor !== taskColor) {
+        let colorTask = selectedTask[0].style.backgroundColor;
+        event.target.style.color = colorTask;
+      }
+      else if (eventTargetColor === taskColor) {
+        event.target.style.color = 'rgb(119,119,119)';
+      }
+    })
+  }
+
+  setDayColor()
+
 
 
  
