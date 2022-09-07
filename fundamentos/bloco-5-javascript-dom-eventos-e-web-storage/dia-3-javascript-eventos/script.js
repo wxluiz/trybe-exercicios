@@ -195,7 +195,37 @@ function createDaysOfTheWeek() {
 
   setDayColor()
 
+  function adicionarCompromisso() {
+    let input= document.querySelector('#task-input');
+    let button = document.querySelector('#btn-add');
+    let taskList = document.querySelector('.task-list');
 
+    input.addEventListener('keyup', function(event){
+      if (event.key === 'Enter' && input.value.length > 0) {
+        let newLi = document.createElement('li');
+
+        newLi.innerText = input.value;
+        taskList.appendChild(newLi);
+        input.value = '';
+      }
+    })
+
+    button.addEventListener('click', function(){
+      if (input.value.length > 0) {
+        let newLi = document.createElement('li');
+
+        newLi.innerText = input.value;
+        taskList.appendChild(newLi);
+        input.value = '';
+      }
+      else {
+        alert('Error: Digite ao menos 1 caractere.');
+      }
+    })
+  }
+
+  adicionarCompromisso();
+  
 
  
 
