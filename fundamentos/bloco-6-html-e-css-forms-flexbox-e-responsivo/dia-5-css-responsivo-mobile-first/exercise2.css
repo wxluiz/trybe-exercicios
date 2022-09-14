@@ -1,0 +1,52 @@
+html {
+    box-sizing: border-box;
+  }
+  
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+
+  .container {
+    display: flex;
+  }
+
+  p {
+    padding: 15px;
+  }
+
+  @media screen and (max-width: 600px) {
+
+    body {
+        background-color: #3E7B7B;
+        font-family: sans-serif;
+    }
+
+    .container {
+        flex-direction: column;
+    }
+
+    p {
+        line-height: 1.5em;
+    }
+  }
+
+  @media screen and (min-width: 600px) {
+
+    body {
+        background-color: #125757;
+    }
+
+    .container {
+        flex-wrap: wrap;
+    }
+  }
+
+  @media screen and (min-width: 1000px) {
+    body {
+        background-color: #034545;
+    }
+
+    .container {
+        flex-wrap: nowrap;
+    }
+  }
