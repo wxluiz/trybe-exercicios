@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>exercício</title>
+
+    <style>
+        #btn {
+            width: 80px;
+            height: 40px;
+            margin-left: 45%;
+            margin-top: 10%;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <span id="text"></span>
+    </div>
+    <button id="btn">click aqui!</button>
+    <script>
+        let clickCount = 0;
+        const contadorDeClicks = document.getElementById("text");
+        const btn = document.getElementById("btn");
+        
+        btn.addEventListener("click", () => contadorDeClicks.innerText = clickCount += 1)
+
+    </script>
+</body>
+</html>
