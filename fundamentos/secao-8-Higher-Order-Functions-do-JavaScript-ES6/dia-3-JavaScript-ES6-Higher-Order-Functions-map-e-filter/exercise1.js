@@ -82,4 +82,10 @@ const organiza = author.sort((a, b) => {
     return idade1 - idade2
 })
 
-console.log(organiza)
+// console.log(organiza)
+
+// Exercicio 3
+
+const ficcao = books.filter((element) => (element.genre === 'Ficção Científica' || element.genre === 'Fantasia'))
+
+console.log(ficcao)
