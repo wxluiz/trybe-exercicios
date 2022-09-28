@@ -88,4 +88,22 @@ const organiza = author.sort((a, b) => {
 
 const ficcao = books.filter((element) => (element.genre === 'Ficção Científica' || element.genre === 'Fantasia'))
 
-console.log(ficcao)
+// console.log(ficcao)
+
+// exercicio 4 
+
+const mais60 = books.filter((element) => (2022 - element.releaseYear > 60))
+
+const maisVelhoAoMaisNovo = mais60.sort((a, b) => {
+    return a.releaseYear - b.releaseYear
+})
+
+// console.log(maisVelhoAoMaisNovo)
+
+// Exercicio 5
+
+const nomes = books.filter((element) => (element.genre === 'Ficção Científica' || element.genre === 'Fantasia')).map((element) => element.author.name).sort()
+
+// const nomesAlfa = nomes.sort((a, b) => b - a)
+
+console.log(nomes)
