@@ -104,6 +104,20 @@ const maisVelhoAoMaisNovo = mais60.sort((a, b) => {
 
 const nomes = books.filter((element) => (element.genre === 'Ficção Científica' || element.genre === 'Fantasia')).map((element) => element.author.name).sort()
 
-// const nomesAlfa = nomes.sort((a, b) => b - a)
 
-console.log(nomes)
+// console.log(nomes)
+
+// Exercicio 6
+
+const nameMais60 = mais60.map((element) => element.name)
+
+// console.log(nameMais60)
+
+// Exercicio 7
+
+const encontraAutor = books.find((element) => (element.author.name[1] === '.' && element.author.name[4] === '.' && element.author.name[7] === '.')
+);
+
+const nameBook = encontraAutor.name
+
+console.log(nameBook)
